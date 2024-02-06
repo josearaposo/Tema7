@@ -10,8 +10,12 @@ cliente.onload = function(){
     const alumno = JSON.parse(alumnosText);
     mostrar(alumno);
     mostrar(alumnosText);
-} */
-alumnos();
+} 
+
+-----------------------------------------------------
+*/
+
+/* alumnos();
 
 async function alumnos(){
     const respuestaURL = "./A01T7-JARaposo.json"
@@ -21,16 +25,15 @@ async function alumnos(){
     const alumnosText = await respuesta.text();
 
     const alumnos = JSON.parse(alumnosText);
-    crear(alumnos);
+    mostrar(alumnos);
     mostrar(alumnosText);
 
-}
+} */
+
+
 
 function mostrar(al){
     console.log(al);
 }
 
-function crear(al){
-    
-}
 
