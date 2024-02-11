@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta</title>
+    <script src=""></script>
+    <script>
+        function enviarVoto(opcion) {
+            $.ajax({
+                type: "GET",
+                url: "encuesta_voto.php",
+                data: { voto: opcion },
+                success: function (data) {
+                    alert("Voto registrado. Resultados actuales: " + data);
+                },
+                error: function () {
+                    alert("Error al enviar el voto.");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>Encuesta</h2>
+    <form>
+        <label><input type="radio" name="opcion" value="Madrid"> Madrid</label><br>
+        <label><input type="radio" name="opcion" value="Girona"> Girona</label><br>
+        <label><input type="radio" name="opcion" value="Barcelona"> Barcelona</label><br>
+        <label><input type="radio" name="opcion" value="Cadiz"> Cadiz</label><br>
+        <button type="button" onclick="votar()">Votar</button>
+    </form>
+
+    <script src="A3T7-JARaposo.js"></script>
+</body>
+</html>
